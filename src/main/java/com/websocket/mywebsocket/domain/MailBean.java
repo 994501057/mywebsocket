@@ -7,15 +7,25 @@ public class MailBean implements Serializable {
     private String recipient;//邮件接收人
     private String subject; //邮件主题
     private String content; //邮件内容
+    private String enclosurePath; // 附件路径
     // 省略setget方法
+
+    public String getEnclosurePath() {
+        return enclosurePath;
+    }
+
+    public void setEnclosurePath(String enclosurePath) {
+        this.enclosurePath = enclosurePath;
+    }
 
     public MailBean() {
     }
 
-    public MailBean(String recipient, String subject, String content) {
+    public MailBean(String recipient, String subject, String content, String enclosurePath) {
         this.recipient = recipient;
         this.subject = subject;
         this.content = content;
+        this.enclosurePath = enclosurePath;
     }
 
     public static long getSerialVersionUID() {
